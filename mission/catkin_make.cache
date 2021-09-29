@@ -1,2 +1,0 @@
-.
--DCATKIN_DEVEL_PREFIX=/home/amov/Prometheus/devel -DCMAKE_INSTALL_PREFIX=/home/amov/Prometheus/install -G Unix Makefiles
