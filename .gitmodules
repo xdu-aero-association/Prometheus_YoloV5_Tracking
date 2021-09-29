@@ -6,3 +6,7 @@
 	path = Modules/global_planning
 	url = https://github.com/potato77/prometheus_global_planning
 	branch = main
+[submodule "Modules/object_detection_yolov5tensorrt"]
+	path = Modules/object_detection_yolov5tensorrt
+	url = https://github.com/xdu-aero-association/prometheus-yolov5-tensorrt
+	branch = master

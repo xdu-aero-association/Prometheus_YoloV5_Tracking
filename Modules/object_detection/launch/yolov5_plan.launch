@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="prometheus_mission" type="my_plan_control" name="my_plan_control" output="screen">	
+	</node>	
+</launch>

@@ -35,7 +35,12 @@ add_message_files(
   LogMessagePlanning.msg
   LogMessageDetection.msg
   SwarmCommand.msg
-	Formation.msg
+  Formation.msg
+  ArucoInfo.msg
+  MultiArucoInfo.msg
+  IndoorSearch.msg
+  UgvState.msg
+  UgvCommand.msg
 )
 
 add_action_files(

@@ -61,6 +61,32 @@ include_directories(
 ###############################
 ##      声明可执行cpp文件     ##
 ###############################
+
+
+add_executable(test gimbal_control/test.cpp)
+add_dependencies(test prometheus_mission_gencpp)
+target_link_libraries(test ${catkin_LIBRARIES})
+
+add_executable(my_gimbal_control gimbal_control/my_gimbal_control.cpp)
+add_dependencies(my_gimbal_control prometheus_mission_gencpp)
+target_link_libraries(my_gimbal_control ${catkin_LIBRARIES})
+
+add_executable(my_plan_control gimbal_control/my_plan_control.cpp)
+add_dependencies(my_plan_control prometheus_mission_gencpp)
+target_link_libraries(my_plan_control ${catkin_LIBRARIES})
+
+add_executable(gimbal_control_circle gimbal_control/gimbal_control_circle.cpp)
+add_dependencies(gimbal_control_circle prometheus_mission_gencpp)
+target_link_libraries(gimbal_control_circle ${catkin_LIBRARIES})
+
+add_executable(gimbal_control_demo gimbal_control/gimbal_control_demo.cpp)
+add_dependencies(gimbal_control_demo prometheus_mission_gencpp)
+target_link_libraries(gimbal_control_demo ${catkin_LIBRARIES})
+
+add_executable(gimbal_control gimbal_control/gimbal_control.cpp)
+add_dependencies(gimbal_control prometheus_mission_gencpp)
+target_link_libraries(gimbal_control ${catkin_LIBRARIES})
+
 add_executable(pad_tracking test/pad_tracking.cpp)
 add_dependencies(pad_tracking prometheus_mission_gencpp)
 target_link_libraries(pad_tracking ${catkin_LIBRARIES})
@@ -108,11 +134,6 @@ target_link_libraries(waypoint_tracking ${catkin_LIBRARIES})
 add_executable(autonomous_landing autonomous_landing/autonomous_landing.cpp)
 add_dependencies(autonomous_landing prometheus_mission_gencpp)
 target_link_libraries(autonomous_landing ${catkin_LIBRARIES})
-
-add_executable(autonomous_landing_outdoor autonomous_landing/autonomous_landing_outdoor.cpp)
-add_dependencies(autonomous_landing_outdoor prometheus_mission_gencpp)
-target_link_libraries(autonomous_landing_outdoor ${catkin_LIBRARIES})
-
 
 add_executable(object_tracking object_tracking/object_tracking.cpp)
 add_dependencies(object_tracking prometheus_mission_gencpp)
